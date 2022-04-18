@@ -7,6 +7,52 @@ body {
     background-color: #efefef;
 }
 
+.land {
+    max-width: 1360px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+}
+
+.land::before, .land::after {
+    content: "";
+    position: absolute;
+    width: calc(100% - 30px);
+    height: 4px;
+    background: #fff;
+    transition: all 0.3s;
+}
+
+.land::before {
+    left: -100%; top: 10px;
+}
+
+.land::after {
+    left: 100%; bottom: 10px;
+}
+
+.land:hover::before, .land:hover::after {
+    left: 15px;
+}
+
+.land img {
+    width: 100%;
+}
+
+.land .txt {
+    text-align: center;
+    position: absolute;
+}
+
+.txt h1, .txt p {
+    color: #fff;
+    padding: 10px 20px;
+}
+
 .bakery {
     padding: 0;
     margin: 0;
