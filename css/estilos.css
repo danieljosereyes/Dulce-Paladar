@@ -8,6 +8,10 @@ body {
 
 .land {
     width: 100%;
+    margin: 0 auto ;
+}
+
+.land img {
     margin: 0 auto;
 }
 
@@ -20,4 +24,9 @@ section article {
     background-color: #fff;
     margin: 1rem 0;
     border-radius: 0.5rem;
+    padding: 0.50rem 0;
+}
+
+section article h2, section article p {
+    margin: 1rem;
 }
