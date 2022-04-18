@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="css/estilos.css">
     <title>Dulce Paladar</title>
 </head>
-<body>
-  <header>
+<body class="container-fluid">
+  <header class="row">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">Dulce Paladar</a>
@@ -38,39 +38,41 @@
             </div>
           </nav>
   </header>
-     
-  <section class="land">
-    <img src="imagenes/The Bakery.jpg" class="img-fluid" alt="Wild Landscape" /> 
+
+  <section class="row land">
+    <img class="col-12 bakery" src="imagenes/The Bakery.jpg"  alt="Wild Landscape" /> 
   </section>
 
-  <section class="contenedor">
-    <article>
-      <h2>Pastel de Crema</h2>
-      <img class="img-fluid" src="imagenes/pastel-de-naranja-640 (3).jpg" alt="">
-      <p>Aca va una descripcion para las imagenes</p>
-    </article>
-    <article>
-      <h2>Flan Vegano</h2>
-      <img class="img-fluid" src="imagenes/33 Impossibly Satisfying Food Photos.jpg" alt="">
-      <p>Aca va una descripcion para las imagenes</p>
-    </article>
-    <article>
-      <h2>Pastel de Crema</h2>
-      <img class="img-fluid" src="imagenes/pastel-de-naranja-640 (3).jpg" alt="">
-      <p>Aca va una descripcion para las imagenes</p>
-    </article>
-    <article>
-      <h2>Tarta de Crema y Frutas</h2>
-      <img class="img-fluid" src="imagenes/Tarta de crema y frutas frescas - Recetas de rechupete.jpg" alt="">
-      <p>Aca va una descripcion para las imagenes</p>
-    </article>
+  
+  <main class="row">     
+
+      <article class="col-6 card">
+        <h2>Pastel de Crema</h2>
+        <img class="img-fluid" src="imagenes/pastel-de-naranja-640 (3).jpg" alt="">
+        <p>Aca va una descripcion para las imagenes</p>
+      </article>
+      <article class="col-6  card">
+        <h2>Flan Vegano</h2>
+        <img class="img-fluid" src="imagenes/33 Impossibly Satisfying Food Photos.jpg" alt="">
+        <p>Aca va una descripcion para las imagenes</p>
+      </article>
+      <article class="col-6 card">
+        <h2>Pastel de Crema</h2>
+        <img class="img-fluid" src="imagenes/pastel-de-naranja-640 (3).jpg" alt="">
+        <p>Aca va una descripcion para las imagenes</p>
+      </article>
+      <article class="col-6 card">
+        <h2>Tarta de Crema y Frutas</h2>
+        <img class="img-fluid" src="imagenes/Tarta de crema y frutas frescas - Recetas de rechupete.jpg" alt="">
+        <p>Aca va una descripcion para las imagenes</p>
+      </article>
+  </main>
+
+  <section class="row land">
+    <img class="col-12 bakery" src="imagenes/Bossuyt Shop Interiors - Bossuyt Shop Interiors.jpg"  alt="Wild Landscape" /> 
   </section>
 
-  <section>
-    <img src="imagenes/Bossuyt Shop Interiors - Bossuyt Shop Interiors.jpg" class="img-fluid" alt="Wild Landscape" />  
-  </section>
-
-  <footer>
+  <footer class="row">
   <!-- Copyright -->
   <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
     © 2022 Copyright
