@@ -13,7 +13,7 @@ body {
     display: flex;
     align-items: center;
     overflow: hidden;
-
+    cursor: pointer;
     display: flex;
     align-items: center;
 }
@@ -46,11 +46,19 @@ body {
 .land .txt {
     text-align: center;
     position: absolute;
+    transition: all 0.3s;
+    transform: scale(1.5);
+    opacity: 0;
 }
 
 .txt h1, .txt p {
     color: #fff;
     padding: 10px 20px;
+}
+
+.land .txt .visible {
+    transform: scale(1);
+    opacity: 1;
 }
 
 .bakery {
