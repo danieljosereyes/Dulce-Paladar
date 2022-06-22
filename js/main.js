@@ -1,9 +1,9 @@
-let usuario = prompt(`ingrese usuario/admin`)
+//let usuario = prompt(`ingrese usuario/admin`)
 
-while (usuario !== `admin`) {
-	alert(`usuario incorrecto!`)
-	usuario = prompt(`ingrese el usuario/admin`)
-}
+//while (usuario !== `admin`) {
+//	alert(`usuario incorrecto!`)
+//	usuario = prompt(`ingrese el usuario/admin`)
+//}
 
 const saludar = (nombre) => {
 	let frase = `hola ${nombre}! Como estas?`
@@ -18,17 +18,17 @@ const validarCliente = (edad)=>{
 		alert("no puedes comprar sin un representante.")
 	}
 }
-saludar(prompt(`cual es tu nombre`))
-validarCliente()
+//saludar(prompt(`cual es tu nombre`))
+//validarCliente()
 
 
 //lista de supermercado
-let lista = prompt(`cuantos productos vas a comprar?`)
-let listaSupermercado = []
+//let lista = prompt(`cuantos productos vas a comprar?`)
+//let listaSupermercado = []
 
-for (i = 0; i < lista; i++){
-	listaSupermercado[i] = [prompt(`Cuales son los productos a comprar?`)]
-}
+//for (i = 0; i < lista; i++){
+//	listaSupermercado[i] = [prompt(`Cuales son los productos a comprar?`)]
+//}
 
 
 //carro de compra
@@ -66,3 +66,18 @@ const datos = {
         },
     ]
 }
+
+
+const usuario = {
+    nombre: "daniel",
+    ci: 24145860,
+    correo: "danieljosereyes0000@gmail.com",
+    edad: 26,
+}
+
+usuario.edad += 1
+
+let raza = "piel"
+usuario[raza] = "ninguna"
+
+console.log(usuario)
