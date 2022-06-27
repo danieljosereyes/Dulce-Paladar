@@ -13,8 +13,7 @@ const productos = [
     new producto(4, "pastel de naranja", 2, 3),
 ]
 
-const contenedorProductos = document.getElementById('contenedor--Productos')
-contenedorProductos.className = "blue"
+
 
 function mostrarProductos() {
     productos.forEach((item) => {
@@ -25,37 +24,6 @@ function mostrarProductos() {
         contenedorProductos.appendChild(div)
     })
 }
-
-const modalContainer = document.querySelector('#modal--container_usuario')
-const abrirModal = document.querySelector('#abrir--modal')
-const cerrarModal = document.querySelector('#cerrar--modal')
-
-abrirModal.addEventListener('click', () => {
-  modalContainer.classList.add('modal--container_visible')
-})
-
-cerrarModal.addEventListener('click', () => {
-  modalContainer.classList.remove('modal--container_visible')
-})
-
-
-let usuario
-const usuarioAdmin = localStorage.getItem('user')
-
-if (usuarioAdmin){
-  usuario = usuarioAdmin
-} else {
-  usuario = prompt('ingrese usuario')
-  localStorage.setItem("user", usuario)
-}
-
-const textElement = document.getElementById("bienvenido")
-textElement.innerHTML = `<h4>Bienvenido ${usuario}</h4>`
-
-
-
-
-
 
 mostrarProductos()
 
