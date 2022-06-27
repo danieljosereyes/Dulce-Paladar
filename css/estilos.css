@@ -1,6 +1,83 @@
-body {
+* {
     margin: 0;
     padding: 0;
+/*     background-color: #efefef;
+ */}
+
+ .body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header"
+    "header2"
+    "main"
+    "footer"
+    ;    
+ }
+
+.header {
+    grid-area: header;
+}
+
+.header2 {
+    grid-area: header2;
+    position: sticky;
+    bottom: 0;
+}
+
+.main {
+    grid-area: main;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.iconos--superior {
+    display: flex;
+    justify-content: space-between;
+}
+
+.iconos--inferior {
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal--container_usuario {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+.my-modal {
+    background-color: white;
+    width: 440px;
+    min-height: 296px;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.modal--container_visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.imagen--iconos__superior {
+    width: 50px;
+}
+
+.imagen--iconos__inferior {
+    width: 50px;
 }
 
 .textalign--center {
@@ -18,3 +95,4 @@ body {
 .yellowgreen {
     background-color: yellowgreen;
 }
+
