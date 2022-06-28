@@ -1,17 +1,16 @@
 * {
     margin: 0;
     padding: 0;
-/*     background-color: #efefef;
- */}
+}
 
  .body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: 
     "header"
-    "header2"
     "main"
     "footer"
+    "header2"
     ;    
  }
 
@@ -27,6 +26,19 @@
 
 .main {
     grid-area: main;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.main--imagen img{
+    width: 100%;
+}
+
+.main--imagen__texto--centrado {
+    color: white;
+    position: absolute;
+    top: 20%;
+    left: 31%;
 }
 
 .footer {
@@ -39,7 +51,6 @@
 }
 
 .iconos--inferior {
-    
     display: flex;
     justify-content: space-between;
 }
@@ -72,6 +83,10 @@
     visibility: visible;
 }
 
+#abrir--modal span {
+    font-size: 0;
+}
+
 .imagen--iconos__superior {
     width: 50px;
 }
@@ -82,6 +97,23 @@
 
 .textalign--center {
     text-align: center;
+}
+
+.contenedor--Productos {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.contenedor--Productos div article {
+    margin: 12px 0 0 12px;
+    cursor: pointer;
+    width: 250px;
+    height: 434px;
+}
+
+.contenedor--Productos div article img{
+    width: 100%;
+    object-fit: cover;
 }
 
 .blue {
@@ -96,3 +128,25 @@
     background-color: yellowgreen;
 }
 
+@media screen and (min-width: 768px) {
+    .body{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        "header header header header"
+        "main main main main"
+        "footer footer footer footer "
+        "header2 header2 header2 header2"
+        ;
+    }
+
+    .main--imagen__texto--centrado {
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 45%;
+    }
+
+    #abrir--modal span {
+        font-size: 15px;
+    }
+}

@@ -1,16 +1,17 @@
 class producto {
-    constructor(id, nombre, precio, cantidad){
+    constructor(id, nombre, precio, cantidad, imagen){
         this.id = id
         this.nombre = nombre
         this.precio = precio
         this.cantidad = cantidad
+        this.imagen = imagen
 }}
 
 const productos = [
-    new producto(1, "croassan", 1, 10),
-    new producto(2, "flan", 0.5, 7),
-    new producto(3, "tarta de crema y frutas", 2, 2),
-    new producto(4, "pastel de naranja", 2, 3),
+    new producto(1, "Flan Vegamo", 1, 10, "../imagenes/Flan Vegamo.jpg"),
+    new producto(2, "Berries and Almond Cake", 10, 2, "../imagenes/Berries and Almond Cake.png"),
+    new producto(3, "Tarta de crema y frutas frescas", 2, 7, "../imagenes/Tarta de crema y frutas frescas.jpg"),
+    new producto(4, "Pastel de Naranja", 2, 7, "../imagenes/Pastel de Naranja.jpg"),
 ]
 
 
@@ -18,9 +19,14 @@ const productos = [
 function mostrarProductos() {
     productos.forEach((item) => {
         const div = document.createElement('div')
-        div.innerHTML = `<h3 class="blue">${item.nombre}</h3>
-                         <p class="green">Precio: ${item.precio}</p>
-                         <p class="yellowgreen">Cantidad: ${item.cantidad}</p>`
+        div.innerHTML = `
+                         <article class="cajas--productos" >	
+                           <img src="${item.imagen}" alt="">
+                           <h2>${item.nombre}</h2>
+                           <p>${item.precio}</p>
+                         </article>
+                        
+                         `
         contenedorProductos.appendChild(div)
     })
 }

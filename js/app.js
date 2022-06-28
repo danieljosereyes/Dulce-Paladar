@@ -28,5 +28,5 @@ mainUsuario.innerHTML = `<h2>Bienvenido ${usuario}</h2>`
 
 
 const contenedorProductos = document.getElementById('contenedor--Productos')
-contenedorProductos.className = "blue"
+contenedorProductos.className = "contenedor--Productos"
 
