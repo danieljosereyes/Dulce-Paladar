@@ -27,6 +27,19 @@ const mainUsuario = document.querySelector('.main--usuario')
 mainUsuario.innerHTML = `<h2>Bienvenido ${usuario}</h2>`
 
 
+
+
+let dbJson = JSON.stringify(usuario)
+console.log (dbJson)
+
+let usuarioDB = localStorage.setItem("usuario", dbJson)
+console.log(localStorage)
+
+let listaUsuarios = JSON.parse(dbJson)
+console.log(listaUsuarios)
+
+
+
 const contenedorProductos = document.getElementById('contenedor--Productos')
 contenedorProductos.className = "contenedor--Productos"
 

@@ -14,7 +14,7 @@ const productos = [
     new producto(4, "Pastel de Naranja", 2, 7, "../imagenes/Pastel de Naranja.jpg"),
 ]
 
-
+mostrarProductos()
 
 function mostrarProductos() {
     productos.forEach((item) => {
@@ -31,7 +31,7 @@ function mostrarProductos() {
     })
 }
 
-mostrarProductos()
+
 
 const comentario = [];
 

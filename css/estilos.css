@@ -83,6 +83,10 @@
     visibility: visible;
 }
 
+#abrir--modal {
+    cursor: pointer;
+}
+
 #abrir--modal span {
     font-size: 0;
 }
