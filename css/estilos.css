@@ -120,17 +120,16 @@
     object-fit: cover;
 }
 
-.blue {
-    background: blue;
+.productos {
+    display: flex;
+    flex-direction: column;
 }
 
-.green {
-    background-color: green;
+.productos--articulos_img {
+    width: 100%;
 }
 
-.yellowgreen {
-    background-color: yellowgreen;
-}
+
 
 @media screen and (min-width: 768px) {
     .body{

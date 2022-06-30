@@ -40,6 +40,5 @@ console.log(listaUsuarios)
 
 
 
-const contenedorProductos = document.getElementById('contenedor--Productos')
-contenedorProductos.className = "contenedor--Productos"
+
 
