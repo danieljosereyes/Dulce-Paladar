@@ -6,8 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../../css/estilos.css">
 	<title>Dulce Paladar</title>
-    <script defer src="../../js/app.js"></script>
     <script defer src="../../js/db.js"></script>
+	<script defer src="../../js/app.js"></script>
 </head>
 <body class="body">
     <header class="header">
@@ -22,8 +22,28 @@
 				<img class="imagen--iconos__superior" src="../../imagenes/usuario.png" alt="">
 				<span>Iniciar sesion</span>
 			</div>
+				
 			<h1>Casa Pastelera</h1>
-			<img class="imagen--iconos__superior" src="../../imagenes/carrito-de-compras.png" alt="">
+			
+			<div id="abrir--modal_Carrito">
+				<img class="imagen--iconos__superior" src="../../imagenes/carrito-de-compras.png" alt="">
+			</div>
+			<div id="modal--container_carrito" class="modal--container_carrito">
+				<div id="modal_carrito" class="modal_carrito">
+					<section>
+						<h3>Carrito de Compras</h3>
+						<button id="cerrar--modal_Carrito">X</button>
+					</section>
+					<section>
+						<article>
+							<h6>Berries and Almond Cake</h6>
+							<p>$6</p>
+							<p>1</p>
+							<button>X</button>
+						</article>
+					</section>					
+				</div>
+			</div>
 		</section>
 	</header>
 
@@ -39,7 +59,7 @@
                 <h3 class="productos--articulos_titulo">Berries and Almond Cake</h3>
                 <p class="productos--articulos_precio">Precio</p>
                 <p class="productos--articulos_descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sunt ipsum dicta delectus doloribus officiis dolores sint nostrum accusantium deleniti natus expedita nemo, consequatur voluptatibus perferendis debitis molestiae aspernatur consectetur.</p>
-                <button class="productos--articulos_carrito">AÑADIR AL CARRITO</button>
+                <button id="idPoduct2" class="productos--articulos_carrito">AÑADIR AL CARRITO</button>
             </article>
         </section>
 

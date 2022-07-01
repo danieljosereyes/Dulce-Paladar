@@ -63,3 +63,10 @@ function hacercomentario(arreglo, bloque) {
 }
 
 
+const element2 = document.querySelector('#idPoduct2')
+
+
+element2.addEventListener('click', (event) => {
+    console.log(event.target)
+    console.log('hola')
+})
