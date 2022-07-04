@@ -26,13 +26,9 @@ cerrarModal.addEventListener('click', () => {
 
 let usuario
 const usuarioAdmin = localStorage.getItem('user')
+usuarioAdmin ? usuario = usuarioAdmin : usuario = prompt('ingrese usuario'); localStorage.setItem("user", usuario)
 
-if (usuarioAdmin){
-  usuario = usuarioAdmin
-} else {
-  usuario = prompt('ingrese usuario')
-  localStorage.setItem("user", usuario)
-}
+
 
 const headerUsuario = document.getElementById("bienvenido")
 headerUsuario.innerHTML = `<h4>Bienvenido ${usuario}</h4>`

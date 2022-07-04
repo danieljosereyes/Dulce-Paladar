@@ -19,22 +19,20 @@ const productos = [
     new producto(4, "Pastel de Naranja", 2, 7, "../imagenes/Pastel de Naranja.jpg", `href="productos/4-producto.html"`),
 ]
 
-mostrarProductos()
 
-function mostrarProductos() {
-    productos.forEach((item) => {
-        const div = document.createElement('div')
-        div.innerHTML = `<a ${item.link}>
-                            <article class="cajas--productos" >	
+productos.forEach((item) => {
+    const div = document.createElement('div')
+    div.innerHTML = `<a ${item.link}>
+                          <article class="cajas--productos" >	
                                 <img src="${item.imagen}" alt="">
                                 <h2>${item.nombre}</h2>
                                 <p>${item.precio}</p>
                             </article>
                         </a>
                          `
-        contenedorProductos.appendChild(div)
-    })
-}
+    contenedorProductos.appendChild(div)
+})
+
 
 
 

@@ -37,11 +37,29 @@ function hacercomentario(arreglo, bloque) {
   arreglo.forEach((elementos) => {
     const comentarioContenido = document.createElement("div");
     const hacerComentario = document.createElement("div");
+
     const botonResponder = document.createElement("button");
-    botonResponder.textContent = "Responder";
+    botonResponder.textContent = "RESPONDER";
+
+    botonResponder.addEventListener("click", (e) => {
+      const nuevoInput = inputContenedor.cloneNode(true);
+      nuevoInput.value = "";
+      nuevoInput.focus();
+      nuevoInput.addEventListener("keydown", (e) => {
+        teclaEnter(e, elementos);
+      });
+      comentarioContenido.insertBefore(nuevoInput, hacerComentario);
+    });
+
 
     const botonMeGusta = document.createElement("button");
-    botonMeGusta.textContent = "Me Gusta";
+    botonMeGusta.textContent = "ME GUSTA";
+
+    botonMeGusta.addEventListener("click", (e) => {
+      elementos.meGusta++;
+      botonMeGusta.textContent = `${elementos.meGusta > 0 ? elementos.meGusta : ""} ME GUSTA`;
+    });
+
 
     const divContent = document.createElement("div");
     divContent.textContent = elementos.texto;
@@ -66,7 +84,9 @@ function hacercomentario(arreglo, bloque) {
 const element2 = document.querySelector('#idPoduct2')
 
 
-element2.addEventListener('click', (event) => {
-    console.log(event.target)
-    console.log('hola')
-})
+element2.addEventListener('click', (event) => {hola(event)})
+
+function hola (event) {
+  console.log(event.target)
+  console.log("hola")
+}
