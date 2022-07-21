@@ -33,6 +33,3 @@ productos.forEach((item) => {
     contenedorProductos.appendChild(div)
 })
 
-
-
-

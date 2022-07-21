@@ -37,18 +37,23 @@ const mainUsuario = document.querySelector('.main--usuario')
 mainUsuario.innerHTML = `<h2>Bienvenido ${usuario}</h2>`
 
 
+const contenidoPost = document.querySelector('#contenido--post')
+
+fetch('https://jsonplaceholder.typicode.com/posts/1/comments')
+  .then((response) => response.json())
+  .then((data) => {
+    data.forEach((post) => {
+      const {name, email, body} = post
 
 
-let dbJson = JSON.stringify(usuario)
-console.log (dbJson)
+    contenidoPost.innerHTML += `<article>
+                                <h3>${name}</h3>
+                                <p><em>${email}<em></p>
+                                <p>${body}<p>
+                                </article>
+                                `
+    })
 
-let usuarioDB = localStorage.setItem("usuario", dbJson)
-console.log(localStorage)
-
-let listaUsuarios = JSON.parse(dbJson)
-console.log(listaUsuarios)
-
-
-
+  });
 
 
