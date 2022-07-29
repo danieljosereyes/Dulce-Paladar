@@ -1,0 +1,6 @@
+[
+    {"id": 1,"nombre": "Flan Vegamo", "precio": 1, "cantidad": 10, "imagen": "Flan Vegamo.jpg", "link": "1-producto.html"},
+    {"id": 2,"nombre": "Berries and Almond Cake", "precio": 10, "cantidad": 2, "imagen": "Berries and Almond Cake.png", "link": "2-producto.html"},
+    {"id": 5,"nombre": "Pastel de Naranja", "precio": 2, "cantidad": 7, "imagen": "Tarta de crema y frutas frescas.jpg", "link": "3-producto.html"},
+    {"id": 4,"nombre": "Pastel de Naranja", "precio": 2, "cantidad": 7, "imagen": "Pastel de Naranja.jpg", "link": "4-producto.html"}
+]
