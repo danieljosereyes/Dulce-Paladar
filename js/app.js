@@ -10,7 +10,6 @@ cerrarModalCarrito.addEventListener('click', () => {
   modalContainerCarrito.classList.remove('modal--container_visible')
 })
 
-
 const modalContainer = document.querySelector('#modal--container_usuario')
 const abrirModal = document.querySelector('#abrir--modal')
 const cerrarModal = document.querySelector('#cerrar--modal')
@@ -23,21 +22,15 @@ cerrarModal.addEventListener('click', () => {
   modalContainer.classList.remove('modal--container_visible')
 })
 
-
 let usuario
 const usuarioAdmin = localStorage.getItem('user')
 usuarioAdmin ? usuario = usuarioAdmin : usuario = prompt('ingrese usuario'); localStorage.setItem("user", usuario)
-
-
 
 const headerUsuario = document.getElementById("bienvenido")
 headerUsuario.innerHTML = `<h4>Bienvenido ${usuario}</h4>`
 
 const mainUsuario = document.querySelector('.main--usuario')
 mainUsuario.innerHTML = `<h2>Bienvenido ${usuario}</h2>`
-
-
-
 
 let dbJson = JSON.stringify(usuario)
 console.log (dbJson)
