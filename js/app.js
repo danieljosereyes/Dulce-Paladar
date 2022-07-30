@@ -44,21 +44,9 @@ fetch('https://jsonplaceholder.typicode.com/posts/1/comments')
   .then((data) => {
     data.forEach((post) => {
       const {name, email, body} = post
+    })})
 
 
-<<<<<<< HEAD
-    contenidoPost.innerHTML += `<article>
-                                <h3>${name}</h3>
-                                <p><em>${email}<em></p>
-                                <p>${body}<p>
-                                </article>
-                                `
-    })
-
-  });
-
-
-=======
 let dbJson = JSON.stringify(usuario)
 console.log (dbJson)
 
@@ -67,4 +55,3 @@ console.log(localStorage)
 
 let listaUsuarios = JSON.parse(dbJson)
 console.log(listaUsuarios)
->>>>>>> js
