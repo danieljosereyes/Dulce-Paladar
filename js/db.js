@@ -1,12 +1,8 @@
-
 const comentario = [];
-
 const inputContenedor = document.createElement("div");
 const input = document.createElement("input");
-
 input.classList.add("input");
 const contenedorComentario = document.querySelector("#contenedor--comentarios");
-
 contenedorComentario.appendChild(inputContenedor);
 inputContenedor.appendChild(input);
 
@@ -37,7 +33,6 @@ function hacercomentario(arreglo, bloque) {
   arreglo.forEach((elementos) => {
     const comentarioContenido = document.createElement("div");
     const hacerComentario = document.createElement("div");
-
     const botonResponder = document.createElement("button");
     botonResponder.textContent = "RESPONDER";
 
@@ -51,7 +46,6 @@ function hacercomentario(arreglo, bloque) {
       comentarioContenido.insertBefore(nuevoInput, hacerComentario);
     });
 
-
     const botonMeGusta = document.createElement("button");
     botonMeGusta.textContent = "ME GUSTA";
 
@@ -59,7 +53,6 @@ function hacercomentario(arreglo, bloque) {
       elementos.meGusta++;
       botonMeGusta.textContent = `${elementos.meGusta > 0 ? elementos.meGusta : ""} ME GUSTA`;
     });
-
 
     const divContent = document.createElement("div");
     divContent.textContent = elementos.texto;
@@ -80,13 +73,66 @@ function hacercomentario(arreglo, bloque) {
   });
 }
 
-/* 
-const element2 = document.querySelector('#idPoduct2') */
+const contenedorProductos = document.getElementById('contenedor--Productos')
+contenedorProductos.className = "contenedor--Productos"
+const carritoProductos = document.querySelector("#carrito-productos")
+const totalCarrito = document.querySelector('#total-Carrito')
+let Carrito = []
+let stock = []
 
+fetch('../json/data.json')
+    .then((resp) => resp.json())
+    .then((data) => {
+    stock = data
 
-/* element2.addEventListener('click', (event) => {hola(event)}) */
+    stock.forEach((productos) => {
+        const div = document.createElement('div')
 
-function hola (event) {
-  console.log(event.target)
-  console.log("hola")
-}
+        div.innerHTML = `<article class="cajas--productos" >	
+                            <img src="../imagenes/${productos.imagen}" alt="">
+                            <h2>${productos.nombre}</h2>
+                            <p>${productos.tipo}</p>
+                            <button onclick="agregarAlCarrito(${productos.id})" >Agregar al Carrito</button>
+                        </article>`
+        contenedorProductos.appendChild(div)
+    })
+})
+
+const renderCarrito = (() => {
+  carritoProductos.innerHTML = ``
+
+  Carrito.forEach((item) => {
+    const div = document.createElement('div')
+    div.classList.add('productoEnCarrito')
+
+    div.innerHTML = `<article>
+                        <h6>${item.nombre}</h6>
+                        <p>${item.precio}</p>
+                        <p>${item.cantidad}</p>
+                        <button onclick="removerDelCarrito(${item.id})" class="eliminar">X</button>
+                      </article>`
+                      carritoProductos.append(div)
+    })
+})
+
+const agregarAlCarrito = (id) => {
+  const item = stock.find((producto) => producto.id === id)
+  Carrito.push(item)
+  renderCarrito()
+  renderTotal()
+} 
+
+const renderTotal = (() => {
+  let total = 0
+
+  Carrito.forEach((producto) => total += producto.precio)
+  totalCarrito.innerHTML = total
+})
+
+const removerDelCarrito = ((id) => {
+  const item = Carrito.find((producto) => producto.id === id)
+  const indice = Carrito.indexOf(item)
+  Carrito.splice(indice, 1)
+  renderCarrito()
+  renderTotal()
+})
