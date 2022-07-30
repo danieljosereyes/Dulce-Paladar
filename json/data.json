@@ -1,0 +1,6 @@
+[
+    {"id": 1,"tipo": "Vegano", "nombre": "Flan Vegamo", "precio": 1, "cantidad": 10, "imagen": "Flan Vegamo.jpg"},
+    {"id": 2,"tipo": "Dietetico","nombre": "Berries and Almond Cake", "precio": 10, "cantidad": 2, "imagen": "Berries and Almond Cake.png"},
+    {"id": 3,"tipo": "Vegano", "nombre": "Tarta de crema y frutas frescas", "precio": 2, "cantidad": 7, "imagen": "Tarta de crema y frutas frescas.jpg"},
+    {"id": 4,"tipo": "Dietetico","nombre": "Pastel de Naranja", "precio": 2, "cantidad": 7, "imagen": "Pastel de Naranja.jpg"}
+]

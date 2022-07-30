@@ -46,6 +46,7 @@ fetch('https://jsonplaceholder.typicode.com/posts/1/comments')
       const {name, email, body} = post
 
 
+<<<<<<< HEAD
     contenidoPost.innerHTML += `<article>
                                 <h3>${name}</h3>
                                 <p><em>${email}<em></p>
@@ -57,3 +58,13 @@ fetch('https://jsonplaceholder.typicode.com/posts/1/comments')
   });
 
 
+=======
+let dbJson = JSON.stringify(usuario)
+console.log (dbJson)
+
+let usuarioDB = localStorage.setItem("usuario", dbJson)
+console.log(localStorage)
+
+let listaUsuarios = JSON.parse(dbJson)
+console.log(listaUsuarios)
+>>>>>>> js

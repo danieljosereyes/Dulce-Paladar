@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 const contenedorProductos = document.getElementById('contenedor--Productos')
 contenedorProductos.className = "contenedor--Productos"
@@ -33,3 +34,5 @@ productos.forEach((item) => {
     contenedorProductos.appendChild(div)
 })
 
+=======
+>>>>>>> js
