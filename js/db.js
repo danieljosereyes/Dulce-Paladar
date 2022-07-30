@@ -80,11 +80,11 @@ function hacercomentario(arreglo, bloque) {
   });
 }
 
+/* 
+const element2 = document.querySelector('#idPoduct2') */
 
-const element2 = document.querySelector('#idPoduct2')
 
-
-element2.addEventListener('click', (event) => {hola(event)})
+/* element2.addEventListener('click', (event) => {hola(event)}) */
 
 function hola (event) {
   console.log(event.target)

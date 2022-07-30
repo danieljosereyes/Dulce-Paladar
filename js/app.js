@@ -47,8 +47,3 @@ console.log(localStorage)
 
 let listaUsuarios = JSON.parse(dbJson)
 console.log(listaUsuarios)
-
-
-
-
-
