@@ -85,7 +85,7 @@ let Carrito
 const CarritoLC = JSON.parse(localStorage.getItem('Carrito'))
 let stock = []
 
-fetch('../json/data.json')
+fetch('./json/data.json')
     .then((resp) => resp.json())
     .then((data) => {
     stock = data
@@ -93,7 +93,7 @@ fetch('../json/data.json')
     stock.forEach((productos) => {
         const div = document.createElement('div')
         div.innerHTML = `<article class="cajas--productos" >	
-                            <img src="../imagenes/${productos.imagen}" alt="">
+                            <img src="imagenes/${productos.imagen}" alt="">
                             <h2>${productos.nombre}</h2>
                             <p>${productos.tipo}</p>
                             <button onclick="agregarAlCarrito(${productos.id})" >Agregar al Carrito</button>
