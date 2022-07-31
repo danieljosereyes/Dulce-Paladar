@@ -32,7 +32,9 @@ function teclaEnter(e, enter) {
 function hacercomentario(arreglo, bloque) {
   arreglo.forEach((elementos) => {
     const comentarioContenido = document.createElement("div");
+    comentarioContenido.classList.add("comentario-contenido");
     const hacerComentario = document.createElement("div");
+    hacerComentario.classList.add("hacer-comentario");
     const botonResponder = document.createElement("button");
     botonResponder.textContent = "RESPONDER";
 
@@ -77,7 +79,9 @@ const contenedorProductos = document.getElementById('contenedor--Productos')
 contenedorProductos.className = "contenedor--Productos"
 const carritoProductos = document.querySelector("#carrito-productos")
 const totalCarrito = document.querySelector('#total-Carrito')
-let Carrito = []
+let Carrito
+const CarritoLC = JSON.parse(localStorage.getItem('Carrito'))
+
 let stock = []
 
 fetch('../json/data.json')
@@ -118,13 +122,14 @@ const renderCarrito = (() => {
 const agregarAlCarrito = (id) => {
   const item = stock.find((producto) => producto.id === id)
   Carrito.push(item)
+  localStorage.setItem('Carrito', JSON.stringify(Carrito))
   renderCarrito()
   renderTotal()
 } 
 
 const renderTotal = (() => {
   let total = 0
-
+  localStorage.setItem('Carrito', JSON.stringify(Carrito))
   Carrito.forEach((producto) => total += producto.precio)
   totalCarrito.innerHTML = total
 })
@@ -133,6 +138,15 @@ const removerDelCarrito = ((id) => {
   const item = Carrito.find((producto) => producto.id === id)
   const indice = Carrito.indexOf(item)
   Carrito.splice(indice, 1)
+  localStorage.setItem('Carrito', JSON.stringify(Carrito))
   renderCarrito()
   renderTotal()
 })
+
+if (CarritoLC) {
+  Carrito = CarritoLC
+  renderCarrito()
+  renderTotal()
+} else {
+  Carrito =  []
+}

@@ -36,7 +36,6 @@ let dbJson = JSON.stringify(usuario)
 console.log (dbJson)
 
 let usuarioDB = localStorage.setItem("usuario", dbJson)
-console.log(localStorage)
 
 let listaUsuarios = JSON.parse(dbJson)
 console.log(listaUsuarios)
