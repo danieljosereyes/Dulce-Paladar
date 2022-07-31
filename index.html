@@ -4,28 +4,18 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" href="../css/estilos.css">
 	<title>Dulce Paladar</title>
-	<script defer src="js/app.js"></script>
+	<script defer src="../js/app.js"></script>
+	<script defer src="../js/db.js"></script>
 </head>
 <body class="body">
-	<header class="header">
+    <header class="header">
 		<section class="iconos--superior">
-			<div id="modal--container_usuario" class="modal--container_usuario"__usuario>
-				<div class="my-modal">
-					<div id="bienvenido"></div>
-					<button id="cerrar--modal">X</button>
-				</div>
-			</div>
-			<div id="abrir--modal">
-				<img class="imagen--iconos__superior" src="imagenes/usuario.png" alt="">
-				<span>Iniciar sesion</span>
-			</div>
-				
 			<h1>Casa Pastelera</h1>
-			
+			<!-- Modal Carrito -->
 			<div id="abrir--modal_Carrito">
-				<img class="imagen--iconos__superior" src="imagenes/carrito-de-compras.png" alt="">
+				<img class="imagen--iconos__superior" src="../imagenes/carrito-de-compras.png" alt="">
 			</div>
 			<div id="modal--container_carrito" class="modal--container_carrito">
 				<div id="modal_carrito" class="modal_carrito">
@@ -33,45 +23,36 @@
 						<h3>Carrito de Compras</h3>
 						<button id="cerrar--modal_Carrito">X</button>
 					</section>
-					<section>
-						<article>
-							<h6>Berries and Almond Cake</h6>
-							<p>$6</p>
-							<p>1</p>
-							<button>X</button>
-						</article>
-					</section>					
+					<section id="carrito-productos">
+					</section>	
+					<section id="total-Carrito">
+					</section>	
 				</div>
 			</div>
 		</section>
 	</header>
 
-	<main class="main">
-        <section class="main--usuario">
-        </section>
-
+    <main class="main">
+		<!-- Imagen Principal -->
 		<section>
 			<div class="main--imagen">
 				<img src="imagenes/Bossuyt Shop Interiors - Bossuyt Shop Interiors.jpg" alt="">
 				<h2 class="main--imagen__texto--centrado">Casa Pastelera</h2>
 			</div>
 		</section>
-		<section id="contenido--post">
-			
+		<!-- Productos -->
+		<section id="contenedor--Productos" class="contenedor--Productos">
+		</section>		
+		<!-- Seccion de Comentarios -->
+		<section>
+			<div id="contenedor--comentarios" ></div>
 		</section>
 	</main>
+    
 	<footer class="footer">
 		<p class="textalign--center">Derechos Reservados</p>
 	</footer>
 
-	<header class="header2">
-		<section class="iconos--inferior">
-			<a href="index.html"><img class="imagen--iconos__inferior" src="imagenes/casa.png" alt=""></a>
-			<img class="imagen--iconos__inferior" src="imagenes/bicicleta.png" alt="">
-			<a href="paginas/productos.html"><img class="imagen--iconos__inferior" src="imagenes/pasteleria.png" alt=""></a>
-			<img class="imagen--iconos__inferior" src="imagenes/signo-de-interrogacion.png" alt="">
-		</section>
-	</header>
-
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

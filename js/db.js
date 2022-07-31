@@ -1,3 +1,4 @@
+//Seccion de comentarios
 const comentario = [];
 const inputContenedor = document.createElement("div");
 const input = document.createElement("input");
@@ -75,13 +76,13 @@ function hacercomentario(arreglo, bloque) {
   });
 }
 
+//Carrito de Compras
 const contenedorProductos = document.getElementById('contenedor--Productos')
 contenedorProductos.className = "contenedor--Productos"
 const carritoProductos = document.querySelector("#carrito-productos")
 const totalCarrito = document.querySelector('#total-Carrito')
 let Carrito
 const CarritoLC = JSON.parse(localStorage.getItem('Carrito'))
-
 let stock = []
 
 fetch('../json/data.json')
@@ -91,7 +92,6 @@ fetch('../json/data.json')
 
     stock.forEach((productos) => {
         const div = document.createElement('div')
-
         div.innerHTML = `<article class="cajas--productos" >	
                             <img src="../imagenes/${productos.imagen}" alt="">
                             <h2>${productos.nombre}</h2>
@@ -104,7 +104,6 @@ fetch('../json/data.json')
 
 const renderCarrito = (() => {
   carritoProductos.innerHTML = ``
-
   Carrito.forEach((item) => {
     const div = document.createElement('div')
     div.classList.add('productoEnCarrito')
@@ -123,6 +122,21 @@ const agregarAlCarrito = (id) => {
   const item = stock.find((producto) => producto.id === id)
   Carrito.push(item)
   localStorage.setItem('Carrito', JSON.stringify(Carrito))
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'bottom-end',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+  })
+  Toast.fire({
+    icon: 'success',
+    title: 'Agregado Correctamente'
+  })
   renderCarrito()
   renderTotal()
 } 
@@ -139,6 +153,13 @@ const removerDelCarrito = ((id) => {
   const indice = Carrito.indexOf(item)
   Carrito.splice(indice, 1)
   localStorage.setItem('Carrito', JSON.stringify(Carrito))
+  Swal.fire({
+    position: 'center',
+    icon: 'info',
+    title: 'Eliminando del carrito',
+    showConfirmButton: false,
+    timer: 1500
+  })
   renderCarrito()
   renderTotal()
 })
