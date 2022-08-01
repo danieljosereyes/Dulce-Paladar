@@ -111,7 +111,6 @@ const renderCarrito = (() => {
     div.innerHTML = `<article>
                         <h6>${item.nombre}</h6>
                         <p>${item.precio}</p>
-                        <p>${item.cantidad}</p>
                         <button onclick="removerDelCarrito(${item.id})" class="eliminar">X</button>
                       </article>`
                       carritoProductos.append(div)
@@ -145,7 +144,7 @@ const renderTotal = (() => {
   let total = 0
   localStorage.setItem('Carrito', JSON.stringify(Carrito))
   Carrito.forEach((producto) => total += producto.precio)
-  totalCarrito.innerHTML = total
+  totalCarrito.innerHTML = `Total a pagar: ${total}`
 })
 
 const removerDelCarrito = ((id) => {
