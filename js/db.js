@@ -144,7 +144,7 @@ const renderTotal = (() => {
   let total = 0
   localStorage.setItem('Carrito', JSON.stringify(Carrito))
   Carrito.forEach((producto) => total += producto.precio)
-  totalCarrito.innerHTML = `Total a pagar: ${total}`
+  totalCarrito.innerHTML = `Total a pagar: ${total}$`
 })
 
 const removerDelCarrito = ((id) => {
